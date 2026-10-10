@@ -6,6 +6,8 @@ import cors from "cors";
 import connectDB from "./src/db/db.js";
 import authRoutes from "./src/route/authRoutes.js";
 import productRoutes from "./src/route/productRoutes.js";
+import dns from 'dns';
+dns.setServers(["1.1.1.1","8.8.8.8"]);
 
 
 // =====================================================
