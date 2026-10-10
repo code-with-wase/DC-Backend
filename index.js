@@ -5,6 +5,8 @@ import cors from "cors";
 
 import connectDB from "./src/db/db.js";
 import authRoutes from "./src/route/authRoutes.js";
+import productRoutes from "./src/route/productRoutes.js";
+
 
 // =====================================================
 // EXPRESS APP
@@ -109,6 +111,7 @@ app.get("/health", (req, res) => {
 // =====================================================
 
 app.use("/auth", authRoutes);
+app.use("/products", productRoutes);
 
 // =====================================================
 // 404 HANDLER
