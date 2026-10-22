@@ -5,6 +5,7 @@ import dns from "dns";
 
 import connectDB from "./src/db/db.js";
 import authRoutes from "./src/route/authRoutes.js";
+import cartRoutes from "./src/route/cartRoutes.js";
 import productRoutes from "./src/route/productRoutes.js";
 
 dns.setServers(["1.1.1.1", "8.8.8.8"]);
@@ -66,6 +67,7 @@ app.get("/health", (req, res) => {
 });
 
 app.use("/auth", authRoutes);
+app.use("/cart", cartRoutes);
 app.use("/products", productRoutes);
 
 app.use((req, res) => {
